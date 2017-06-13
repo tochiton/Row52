@@ -1,0 +1,6 @@
+framework module Pods_TableViewStory {
+  umbrella header "Pods-TableViewStory-umbrella.h"
+
+  export *
+  module * { export * }
+}
