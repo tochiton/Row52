@@ -55,7 +55,7 @@
                         <color key="backgroundColor" red="0.15904405381944445" green="0.53877179490277782" blue="0.71466155186944447" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.65864484180000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Log In" id="TVk-97-qyF"/>
+                    <tabBarItem key="tabBarItem" title="Log In" image="row52-info" id="TVk-97-qyF"/>
                     <connections>
                         <outlet property="login_button" destination="LEK-hN-2Bq" id="7Yw-2U-Uzw"/>
                         <outlet property="password_input" destination="juU-7W-4Kq" id="FeM-Eb-jyE"/>
@@ -146,7 +146,7 @@
                     <view key="view" contentMode="scaleToFill" id="sIb-r3-ChB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.93063616071428568" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="eKY-qE-ejl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -177,7 +177,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bq6-xt-V6S">
                                 <rect key="frame" x="117" y="435" width="163" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.65864484180000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.4823529411764706" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Upload">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -197,7 +197,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmV-AY-4pp">
                                 <rect key="frame" x="117" y="509" width="163" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.65864484180000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.4823529412" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Next Vehicle">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -207,7 +207,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.93278459821428572" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="6Da-OI-7aB" id="2pz-7k-B2P"/>
@@ -229,9 +229,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="pJP-jr-zID" kind="relationship" relationship="viewControllers" id="3UG-XB-qgc"/>
+                        <segue destination="Jbj-bd-0xz" kind="relationship" relationship="viewControllers" id="eJh-jt-jiV"/>
                         <segue destination="LiD-Z6-ltv" kind="relationship" relationship="viewControllers" id="0BT-Bg-2VP"/>
                         <segue destination="dXh-Ni-4Ag" kind="relationship" relationship="viewControllers" id="QmK-T0-6T8"/>
-                        <segue destination="Jbj-bd-0xz" kind="relationship" relationship="viewControllers" id="eJh-jt-jiV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BJd-Yh-drd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -318,11 +318,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k87-lU-ku7">
                                 <rect key="frame" x="81" y="147" width="195" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.65864484180000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.4823529412" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Scan">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="x2F-Xq-NdR" kind="show" id="049-XV-76w"/>
                                 </connections>
@@ -330,17 +335,22 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mJ-zl-afI">
                                 <rect key="frame" x="81" y="341" width="195" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.65864484180000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.4823529412" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Enter BarCode">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="yLY-a9-mGs" kind="show" id="b5S-ob-hCY"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.93278459820000004" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ye8-VF-b38"/>
                 </viewController>
@@ -410,7 +420,7 @@
         <scene sceneID="lvp-S7-kyb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jbj-bd-0xz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Scan" id="dj9-y7-HgO"/>
+                    <tabBarItem key="tabBarItem" title="Scan" image="row52-camera" id="dj9-y7-HgO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oPO-UW-i6p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -426,8 +436,12 @@
             <point key="canvasLocation" x="-1054" y="669"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="row52-camera" width="25" height="25"/>
+        <image name="row52-info" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aTi-I6-3rs"/>
         <segue reference="QTz-Pg-wuj"/>
+        <segue reference="aTi-I6-3rs"/>
     </inferredMetricsTieBreakers>
 </document>
