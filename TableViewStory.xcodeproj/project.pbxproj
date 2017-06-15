@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B739DDE1E71C788009C0781 /* RequestInfoBarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B739DDD1E71C788009C0781 /* RequestInfoBarCodeViewController.swift */; };
 		8B76B47A1EF2F01900C14799 /* EnterCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B76B4791EF2F01900C14799 /* EnterCodeViewController.swift */; };
+		8B76B47E1EF3022200C14799 /* AnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B76B47D1EF3022200C14799 /* AnimatedViewController.swift */; };
 		8B77DACD1E4CF48B0053E8DB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77DACC1E4CF48B0053E8DB /* FirstViewController.swift */; };
 		8B7B8D6C1E4A3CA90044B9AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7B8D6B1E4A3CA90044B9AC /* AppDelegate.swift */; };
 		8B7B8D711E4A3CA90044B9AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B7B8D6F1E4A3CA90044B9AC /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		8B739DDD1E71C788009C0781 /* RequestInfoBarCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestInfoBarCodeViewController.swift; sourceTree = "<group>"; };
 		8B76B4791EF2F01900C14799 /* EnterCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterCodeViewController.swift; sourceTree = "<group>"; };
+		8B76B47D1EF3022200C14799 /* AnimatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedViewController.swift; sourceTree = "<group>"; };
 		8B77DACC1E4CF48B0053E8DB /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = ../FirstViewController.swift; sourceTree = "<group>"; };
 		8B7B8D681E4A3CA90044B9AC /* TableViewStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7B8D6B1E4A3CA90044B9AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				8B7B8D721E4A3CA90044B9AC /* Assets.xcassets */,
 				8B7B8D741E4A3CA90044B9AC /* LaunchScreen.storyboard */,
 				8B7B8D771E4A3CA90044B9AC /* Info.plist */,
+				8B76B47D1EF3022200C14799 /* AnimatedViewController.swift */,
 			);
 			path = TableViewStory;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				8B9F5B5E1ED4986E0061BCC1 /* QRScannerController.swift in Sources */,
 				8BA20CFE1E8DA2730040E4F1 /* CameraViewController.swift in Sources */,
 				8B7B8D7E1E4A3F4B0044B9AC /* AttractionTableTableViewController.swift in Sources */,
+				8B76B47E1EF3022200C14799 /* AnimatedViewController.swift in Sources */,
 				8B77DACD1E4CF48B0053E8DB /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

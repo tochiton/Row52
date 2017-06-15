@@ -19,18 +19,31 @@ class EnterCodeViewController: UIViewController {
         barCode.text=""
         barCode.borderStyle = UITextBorderStyle.roundedRect
         
-        // Do any additional setup after loading the view.
-        
-        
     }
 
+    
+    @IBAction func takePhoto(_ sender: Any) {
+        
+        let localBarCode = barCode.text
+        
+        performSegue(withIdentifier: "goToCamera", sender: localBarCode)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == "goToCamera"{
+            let nextScene = segue.destination as! CameraViewController
+            //let backItem = UIBarButtonItem()
+            //backItem.title = "Scan Again"
+            //navigationItem.backBarButtonItem = backItem
+            nextScene.stringPassed = sender as! String
+        }
+    }    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

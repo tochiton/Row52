@@ -6,7 +6,7 @@ target 'TableViewStory' do
   use_frameworks!
 
 	pod 'Alamofire', '~> 4.4'
-
+	pod 'FLAnimatedImage', '~> 1.0'
   # Pods for TableViewStory
 
 end
