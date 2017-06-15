@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B739DDE1E71C788009C0781 /* RequestInfoBarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B739DDD1E71C788009C0781 /* RequestInfoBarCodeViewController.swift */; };
+		8B76B47A1EF2F01900C14799 /* EnterCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B76B4791EF2F01900C14799 /* EnterCodeViewController.swift */; };
 		8B77DACD1E4CF48B0053E8DB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77DACC1E4CF48B0053E8DB /* FirstViewController.swift */; };
 		8B7B8D6C1E4A3CA90044B9AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7B8D6B1E4A3CA90044B9AC /* AppDelegate.swift */; };
 		8B7B8D711E4A3CA90044B9AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B7B8D6F1E4A3CA90044B9AC /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		8B739DDD1E71C788009C0781 /* RequestInfoBarCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestInfoBarCodeViewController.swift; sourceTree = "<group>"; };
+		8B76B4791EF2F01900C14799 /* EnterCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterCodeViewController.swift; sourceTree = "<group>"; };
 		8B77DACC1E4CF48B0053E8DB /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = ../FirstViewController.swift; sourceTree = "<group>"; };
 		8B7B8D681E4A3CA90044B9AC /* TableViewStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7B8D6B1E4A3CA90044B9AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				8B7B8D6B1E4A3CA90044B9AC /* AppDelegate.swift */,
 				8B9239991E9BEEE6009BD490 /* Model.xcdatamodeld */,
 				8B7B8D6F1E4A3CA90044B9AC /* Main.storyboard */,
+				8B76B4791EF2F01900C14799 /* EnterCodeViewController.swift */,
 				8BB64D131EF07E0A0098FD4B /* OptionViewController.swift */,
 				8BA20CFD1E8DA2730040E4F1 /* CameraViewController.swift */,
 				8B739DDD1E71C788009C0781 /* RequestInfoBarCodeViewController.swift */,
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B76B47A1EF2F01900C14799 /* EnterCodeViewController.swift in Sources */,
 				8B7B8D6C1E4A3CA90044B9AC /* AppDelegate.swift in Sources */,
 				8B739DDE1E71C788009C0781 /* RequestInfoBarCodeViewController.swift in Sources */,
 				8BB64D141EF07E0A0098FD4B /* OptionViewController.swift in Sources */,
