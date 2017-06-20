@@ -44,6 +44,9 @@ class FirstViewController: UIViewController {
         //logInButtom.layer.borderWidth = 1
         login_button.layer.borderColor = UIColor.white.cgColor
         
+        // add round corners to the input field
+        username_input.borderStyle = UITextBorderStyle.roundedRect
+        password_input.borderStyle = UITextBorderStyle.roundedRect
         
         //login_now(username: "tochiton", password: "password")
         
