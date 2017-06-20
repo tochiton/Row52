@@ -35,6 +35,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
     
     var stringPassed = ""
     
+    var statusCode = 0
+    
     var urlPostPhoto = "http://row52.com/Api/V1/Vehicle/PostPhoto"
     
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -71,19 +73,19 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
         myLabel.text = stringPassed
         // add asynchronous call for speed
         getLocalFolder()
-        let value = UIInterfaceOrientationMask.landscapeLeft.rawValue
-        UIDevice.current.setValue(value, forKey: "orientation")
+        //let value = UIInterfaceOrientationMask.landscapeLeft.rawValue
+        //UIDevice.current.setValue(value, forKey: "orientation")
         launchCamera()
         
     }
     // fix in landscape mode
-    private func supportedInterfaceOrientaion() -> UIInterfaceOrientationMask{
-        return UIInterfaceOrientationMask.landscapeLeft
-    }
-    private func shouldAutorotate() -> Bool{
-        return false
-    }
-    
+//    private func supportedInterfaceOrientaion() -> UIInterfaceOrientationMask{
+//        return UIInterfaceOrientationMask.landscapeLeft
+//    }
+//    private func shouldAutorotate() -> Bool{
+//        return false
+//    }
+//    
     /*
      Upload photo requirements
      - get token from cache
@@ -153,12 +155,18 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
                     print(response.data)
                     print(response.result)
                     
+                    self.statusCode = (response.response?.statusCode)!
+                    
                     if let JSON = response.result.value {
                         print("JSON: \(JSON)")
                     }
                 }
             case .failure( let encodingError):
                 print("Printing error here ******\(encodingError)")
+                if (self.statusCode == 401){
+                    print("User needs to Log In")
+                }
+                
             }
         }
     }
