@@ -98,8 +98,7 @@
                                 <rect key="frame" x="16" y="55" width="353" height="550"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <mutableString key="text">Help
- 
+                                <mutableString key="text">
 This app was designed to enable employees of an auto salvage yard to take and upload photos of the vehicle inventory set in their yard.  To best benefit from this app, participation in the Row52 web service is required.  If you wish to learn more or participate in Row52, please refer to row52.com/GotInventory or contact:  admin@row52.com.
  
 To use this app,
@@ -278,7 +277,7 @@ To report problems, request credentials or receive assistance, please email:  ad
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bE1-C9-E6W" id="twt-Kd-NSD">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7ij-h2-PdY">
