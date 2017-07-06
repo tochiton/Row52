@@ -193,7 +193,7 @@ class AttractionTableTableViewController: UITableViewController {
             }
             do{
                 try moc.save()
-            }catch let error as NSError{
+            }catch _ as NSError{
                 print("Could not save")
             }catch{
                 
@@ -320,9 +320,9 @@ class AttractionTableTableViewController: UITableViewController {
                         }
                         
                         
-                        print(response.response)
-                        print(response.data)
-                        print(response.result)
+                        //print(response.response)
+                        //print(response.data)
+                        //print(response.result)
                         
                         if let JSON = response.result.value {
                             print("JSON: \(JSON)")

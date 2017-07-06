@@ -11,8 +11,17 @@ import UIKit
 class FirstViewController: UIViewController {
     
     /*
+        List:
+            - change photo rotation before posting
+            - check user authentication before uploading photo
+            - add UI constraint 
+            - fix in progress bar 
+            - add square around the barScanner 
+ 
+    */
+    
+    /*
         Non - prod logIn
-     
         spencer@row52.com
         password1
      
@@ -37,7 +46,8 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "login_bg.png")!)
         // Do any additional setup after loading the view.
         //login_button.backgroundColor = .clear
         login_button.layer.cornerRadius = 5
@@ -121,7 +131,7 @@ class FirstViewController: UIViewController {
                 let preferences = UserDefaults.standard
                 preferences.set(responseData!, forKey: "session")
                 
-                if let mySession = preferences.value(forKey: "session"){
+                if preferences.value(forKey: "session") != nil{
                     //print(mySession)
                     print("Login_Now: Writing the following token into UserDefault")
                 }
