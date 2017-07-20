@@ -15,7 +15,7 @@ class OptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         barCode.text=""
         barCode.borderStyle = UITextBorderStyle.roundedRect
     }

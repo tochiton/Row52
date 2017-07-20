@@ -13,7 +13,6 @@
  
  The landscape photo won't work if the user has disabled the auto rotation
  
- 
  */
 
 import UIKit
@@ -47,7 +46,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
     
     
     @IBAction func UploadPhoto(_ sender: Any) {
-       UploadRequestwithAlamofire()
+        UploadRequestwithAlamofire()
         
     }
     
@@ -65,7 +64,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
      }
      */
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,13 +77,13 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
         
     }
     // fix in landscape mode
-//    private func supportedInterfaceOrientaion() -> UIInterfaceOrientationMask{
-//        return UIInterfaceOrientationMask.landscapeLeft
-//    }
-//    private func shouldAutorotate() -> Bool{
-//        return false
-//    }
-//    
+    //    private func supportedInterfaceOrientaion() -> UIInterfaceOrientationMask{
+    //        return UIInterfaceOrientationMask.landscapeLeft
+    //    }
+    //    private func shouldAutorotate() -> Bool{
+    //        return false
+    //    }
+    //
     /*
      Upload photo requirements
      - get token from cache
@@ -99,7 +97,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
         print("Uploading process started.......")
         
         //  get token from session
-        
         let preferences = UserDefaults.standard
         var myLocalSession: String = ""
         if let mySession = preferences.value(forKey: "session"){
@@ -119,7 +116,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
         parameters = [ "Authorization": token]
         print(parameters)
         
-        
         // check the string is not empty and pass the value in the function
         let urlPostPhoto = self.urlPostPhoto + "?" + "barcode=" + stringPassed
         let tempImage = imageView.image
@@ -130,12 +126,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             multipartFormData.append(UIImageJPEGRepresentation(tempImage!, 0.8)!, withName: "Pic", fileName: "testFile.jpeg", mimeType: "image/jpeg")
-            // to add the body to the request
-            /*
-            for (key, value) in parameters {
-                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
-            }
-            */
+            
         },  usingThreshold:UInt64.init(),
             to: urlPostPhoto,
             method: .post,
@@ -150,10 +141,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
                 })
                 upload.responseJSON{ response in
                     //print(response.request)
-                    print("Printing response ************")
-                    print(response.response)
-                    print(response.data)
-                    print(response.result)
+                    //print("Printing response ************")
+                    //print(response.response)
+                    //print(response.data)
+                    //print(response.result)
                     
                     self.statusCode = (response.response?.statusCode)!
                     
@@ -170,7 +161,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
             }
         }
     }
-    
     
     func launchCamera(){
         // creates an object of type UIImagePikcerController and and set the type to camera
@@ -195,16 +185,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
             // try to connect to the local directory
             // add timestamp to differentiate between files
             //write to file here
-            /*
-             let mediaType = info[UIImagePickerControllerOriginalImage]
-             self.dismiss(animated:true, completion: nil)
-             */
+            
             imageView.image = image
             
             var imagePath = NSDate().description
             
             imagePath = imagePath.replacingOccurrences(of: " ", with: "")
-            
             
             imagePath = newDir.appending("/\(imagePath).jpeg")
             
@@ -212,7 +198,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
             
             //add the barcode, path and date to db
             // check none of them are null
-            
             // turning into binary to save it into the file system
             let data = UIImageJPEGRepresentation(image, 80)
             
@@ -269,8 +254,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate , 
         let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)
         
         let docsURL = dirPaths[0]
-        
-        //let newDir = docsURL.appendingPathComponent("ImagePicker").path
         
         newDir = docsURL.appendingPathComponent("ImagePicker").path
         
