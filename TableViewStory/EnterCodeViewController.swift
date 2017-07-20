@@ -21,12 +21,12 @@ class EnterCodeViewController: UIViewController {
         
     }
 
-    
+   
     @IBAction func takePhoto(_ sender: Any) {
         
-        let localBarCode = barCode.text
+        let localBarCode = barCode.text!
         
-        performSegue(withIdentifier: "goToCamera", sender: localBarCode)
+        performSegue(withIdentifier: "goToPhoto", sender: localBarCode)
     }
     
     
@@ -35,15 +35,22 @@ class EnterCodeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        barCode.text = ""
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if  segue.identifier == "goToCamera"{
+        if  segue.identifier == "goToPhoto"{
             let nextScene = segue.destination as! CameraViewController
             //let backItem = UIBarButtonItem()
             //backItem.title = "Scan Again"
             //navigationItem.backBarButtonItem = backItem
             nextScene.stringPassed = sender as! String
         }
-    }    /*
+    }
+    
+     /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

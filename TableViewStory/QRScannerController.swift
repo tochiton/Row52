@@ -14,7 +14,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-    let alert = UIAlertView()
+    //let alert = UIAlertView()
     
     let managedObjectContext =  (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -40,8 +40,6 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                               AVMetadataObjectTypeQRCode]
     
     
-    //@IBOutlet var messageLabel:UILabel!
-    //@IBOutlet var topbar: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,11 +81,6 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             
             // Start video capture.
             captureSession?.startRunning()
-            
-            
-            // Move the message label and top bar to the front
-            //view.bringSubview(toFront: messageLabel)
-            //view.bringSubview(toFront: topbar)
             
         
             // Initialize QR Code Frame to highlight the QR code
@@ -132,21 +125,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-               // messageLabel.text = metadataObj.stringValue
-               // fire the camera to get the photo
-               
-                // Calling camera -- move it to the cameraController
-                //launchCamera()
-                
-                
-                //alert.title = "BarCode"
-                //alert.message = metadataObj.stringValue
-                // metadataObj.stringValue is the the result with the barCode
-                
-               
-//                let myVC = storyboard?.instantiateViewController(withIdentifier: "CameraViewController") as! CameraViewController
-//                myVC.stringPassed = metadataObj.stringValue!
-//                navigationController?.pushViewController(myVC, animated: true)
+              
                 print("Printing metadata")
                 self.captureSession?.stopRunning()
                 //**********///
@@ -154,15 +133,6 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                 self.dismiss(animated: true, completion: {})
                 print(metadataObj.stringValue)
                 let userInput = metadataObj.stringValue!
-                
-                /*
-                        Here is the logic
-                            - get barCode
-                            - check local db if barCode in db
-                                        display alert
-                                    else
-                                        segue to the next view
-                    */
                 
                 let checkFileInLocalDb = checkLocalDb(barCode: userInput)
                 
@@ -181,8 +151,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                     alertController.addAction(okAction)
                     self.present(alertController, animated: true, completion: nil)
                     self.viewDidLoad()
-                    //alert.addButton(withTitle: "File already exists in the gallery")
-                    //alert.show()
+                
                 }
                 
             }
